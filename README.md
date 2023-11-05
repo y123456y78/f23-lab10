@@ -71,13 +71,13 @@ So, we've specified that whenever we call `get("Snoopy")`, our mocked class shou
 
 Next, we execute a method call on our mock:
 ```
-String snoopyCartoon = ourMock.get("Snoopy");
+String snoopyComic = ourMock.get("Snoopy");
 ```
 
 Now we use the `verify` method to check that our method was called with the given arguments. The following lines confirm that we invoked the `get` method on the mock and that the method returned a value that matches the expectation we set before:
 ```
 verify(ourMock).get("Snoopy");
-assertEquals(snoopyCartoon, "Peanuts")
+assertEquals(snoopyComic, "Peanuts")
 ```
 
 So, now we've successfully mocked the `Comics` class and used a stub method call to write a test for the `get` method in `Comics`.
