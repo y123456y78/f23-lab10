@@ -46,19 +46,19 @@ All of your tests should be written in `AndrewWebServicesTest.java`. You will al
 
 We will be using the mocking framework [Mockito](https://site.mockito.org/) in this lab. Here is a simple example to get you familiar with the important parts of Mockito.
 
-We'll use the `Cartoons` class for this example. The `Cartoons` class represents a mapping from characters to the cartoons they belong to.
+We'll use the `Comics` class for this example. The `Comics` class represents a mapping from characters to the Comics they belong to.
 ```
-public class Cartoons {
-	private Map<String, String> charactersToCartoons;
+public class Comics {
+	private Map<String, String> charactersToComics;
 
 	public String get(String character) {
-		return charactersToCartoons.get(character);
+		return charactersToComics.get(character);
 	}
 }
 ```
-We use the `mock` method to create a mock of `Cartoons`:
+We use the `mock` method to create a mock of `Comics`:
 ```
-Cartoons ourMock = mock(Cartoons.class);
+Comics ourMock = mock(Comics.class);
 ```
 
 Now we can use the `when` and `thenReturn` methods to add behavior to our mocked class (aka stub a method call):
@@ -80,6 +80,6 @@ verify(ourMock).get("Snoopy");
 assertEquals(snoopyCartoon, "Peanuts")
 ```
 
-So, now we've successfully mocked the `Cartoons` class and used a stub method call to write a test for the `get` method in `Cartoons`.
+So, now we've successfully mocked the `Comics` class and used a stub method call to write a test for the `get` method in `Comics`.
 
 This example covered everything you need to know for mocks in this lab. Feel free to checkout the [Mockito website](https://site.mockito.org/) for more information and documentation on the methods we used above, or look online for other examples using Mockito if the one above wasn't clear. Also, ask your TAs or ask on Piazza if you need any further help. Good luck!
